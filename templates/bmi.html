@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>BMI Calculation </title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+</head>
+
+<body>
+    <form class="pure-min" action="/" method="POST">
+        <div class="form-group" style="margin-top:100px; " font-centered">
+            <label> Name: </label>
+            <input type="text" name="username" placeholder="Enter name" form-control required />
+            <label> Weight:</label>
+            <input type="text" name="userweight" placeholder="Enter weight in Kg" form-control require />
+            <label> Height:</label>
+            <input type="text" name="userheight" placeholder="Enter height in cm" form-control require />
+            <input type="email" name="useremail" placeholder="Enter email id" form-control require />
+            <input type="submit" value="submit" />
+        </div>
+    </form>
+    <div>
+        <table border="1" width="50%">
+            <tr>
+                <td>Name</td>
+                <td>Weight</td>
+                <td>Height</td>
+                <td>email</td>
+                <td>bmi</td>
+            </tr>
+            {% if name %}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{weight}} </td>
+                <td>{{height}}</td>
+                <td>{{email}}</td>
+                <td>{{bmi}}</td>
+            </tr>
+            {% endif %}
+        </table>
+        <input type="reset"  value="clear" />
+    </div>
+    
+</body>
+
+</html>
